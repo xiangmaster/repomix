@@ -50,6 +50,10 @@ jobs:
       - name: Select related issues with Claude
         id: claude
         uses: anthropics/claude-code-action@756cc22e19660d20e8cc9496b4f242475a7f7790 # v1.0.235
+        # [VALIDATION-ONLY] gateway auth plumbing; security config below unchanged
+        env:
+          ANTHROPIC_BASE_URL: ${{ secrets.ANTHROPIC_BASE_URL }}
+          ANTHROPIC_AUTH_TOKEN: ${{ secrets.ANTHROPIC_AUTH_TOKEN }}
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ github.token }} # read-only in this job
@@ -57,7 +61,7 @@ jobs:
           # No Bash / Write / network tools: the model can only read the
           # pre-fetched files and return a list of related issue numbers.
           claude_args: >-
-            --model opus
+            --model claude-sonnet-4-6
             --max-turns 5
             --disallowedTools "Bash,Edit,Write,MultiEdit,NotebookEdit,WebFetch,WebSearch,Task"
             --json-schema '{"type":"object","properties":{"related":{"type":"array","items":{"type":"integer"},"maxItems":3}},"required":["related"],"additionalProperties":false}'
