@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1791007754998,
-  "repoUrl": "https://github.com/yamadashy/repomix",
+  "lastUpdate": 1791387946348,
+  "repoUrl": "https://github.com/xiangmaster/repomix",
   "entries": {
     "Repomix Performance": [
       {
@@ -13583,6 +13583,51 @@ window.BENCHMARK_DATA = {
             "range": "±20",
             "unit": "ms",
             "extra": "Median of 20 runs\nQ1: 967ms, Q3: 987ms\nAll times: 944, 955, 960, 966, 967, 967, 967, 976, 977, 978, 979, 980, 984, 985, 986, 987, 989, 992, 994, 1001ms"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "2744253823@qq.com",
+            "name": "xiangmaster",
+            "username": "xiangmaster"
+          },
+          "committer": {
+            "email": "2744253823@qq.com",
+            "name": "xiangmaster",
+            "username": "xiangmaster"
+          },
+          "distinct": true,
+          "id": "10508bd8cea3f39bf076b82f3bd2ed58535e56f1",
+          "message": "validation: gateway auth env + model name (security config unchanged)",
+          "timestamp": "2026-10-07T23:43:57+08:00",
+          "tree_id": "195b85c86d4b742468b7d86c797bf85c7830378b",
+          "url": "https://github.com/xiangmaster/repomix/commit/10508bd8cea3f39bf076b82f3bd2ed58535e56f1"
+        },
+        "date": 1791387944962,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Repomix Pack (macOS)",
+            "value": 720,
+            "range": "±95",
+            "unit": "ms",
+            "extra": "Median of 30 runs\nQ1: 673ms, Q3: 768ms\nAll times: 602, 632, 653, 657, 657, 664, 665, 673, 675, 676, 677, 678, 692, 698, 702, 720, 727, 731, 738, 738, 746, 749, 768, 775, 790, 810, 855, 858, 942, 1011ms"
+          },
+          {
+            "name": "Repomix Pack (Linux)",
+            "value": 964,
+            "range": "±22",
+            "unit": "ms",
+            "extra": "Median of 20 runs\nQ1: 954ms, Q3: 976ms\nAll times: 942, 944, 944, 950, 951, 954, 956, 959, 961, 963, 964, 967, 970, 971, 974, 976, 979, 984, 995, 1026ms"
+          },
+          {
+            "name": "Repomix Pack (Windows)",
+            "value": 803,
+            "range": "±42",
+            "unit": "ms",
+            "extra": "Median of 20 runs\nQ1: 787ms, Q3: 829ms\nAll times: 753, 755, 758, 763, 781, 787, 790, 792, 794, 802, 803, 806, 810, 819, 822, 829, 851, 853, 861, 912ms"
           }
         ]
       }
